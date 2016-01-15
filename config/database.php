@@ -2,10 +2,14 @@
 
 class Database {
 
-    private $host = "localhost";
-    private $db_name = "empresa1";
-    private $username = "root";
-    private $password = "";
+
+    
+    private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    
+    private $host = $url["host"];
+    private $db_name = substr($url["path"], 1);
+    private $username = $url["user"];
+    private $password = $url["pass"];
     public $conn;
 
     public function getConnection() {
