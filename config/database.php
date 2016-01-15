@@ -2,7 +2,7 @@
 
 class Database {
   
-    private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    //private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     
     private $host = "us-cdbr-iron-east-03.cleardb.net";
     private $db_name = "heroku_2d049a44072bae8";
