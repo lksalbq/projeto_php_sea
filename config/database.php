@@ -1,15 +1,13 @@
 <?php
 
 class Database {
-
-
-    
+  
     private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
     
-    private $host = $url["host"];
-    private $db_name = substr($url["path"], 1);
-    private $username = $url["user"];
-    private $password = $url["pass"];
+    private $host = "us-cdbr-iron-east-03.cleardb.net";
+    private $db_name = "heroku_2d049a44072bae8";
+    private $username = "ba50087e68d632";
+    private $password = "f1fba2bc3eb028b";
     public $conn;
 
     public function getConnection() {
