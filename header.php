@@ -183,34 +183,7 @@
         </script>
 
 
-        <script type="text/javascript">
-            //Ajax login
-            jQuery(document).ready(function () {
-                jQuery('#logar_form').submit(function () {
-
-                    var dados = jQuery(this).serialize();
-
-                    jQuery.ajax({
-                        type: "POST",
-                        url: "logar.php",
-                        data: dados,
-                        success: function (result) {
-                            if (result == 1) {
-                                location.href = 'cadastro_funcionario.php';
-                            } else {
-                                $("#msgerro").fadeIn(1500, function () {
-                                    window.setTimeout(function () {
-                                        $('#msgerro').fadeOut();
-                                    }, 10000);
-                                });
-                            }
-                        }
-                    });
-
-                    return false;
-                });
-            });
-        </script>
+ 
     </head>
     <body>
         <div id='page-edita'></div>
