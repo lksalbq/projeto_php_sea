@@ -163,7 +163,7 @@
                         $.post("deletar.php", {matricula: matricula})
                                 .done(function (data) {
 
-                                    alert(data + "Matricula:" + matricula);
+                                   
                                     $("#msgsucessoalt").fadeIn(150, function () {
 
                                         window.setTimeout(function () {
