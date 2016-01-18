@@ -11,6 +11,7 @@ class Database {
 
     public function __construct(){
         $this->url =  parse_url(getenv("CLEARDB_DATABASE_URL"));
+        $this->host = $this->url["host"];
         $this->db_name = substr($this->url["path"], 1);
         $this->username = $this->url["user"];
         $this->password = $this->url["pass"];    
