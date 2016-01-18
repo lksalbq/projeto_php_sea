@@ -20,13 +20,23 @@ class Database {
         $this->username = $url["user"];
         $this->password = $url["pass"];
         $this->conn = null;
-            
+        
+        
+        
+        
         try {
                 $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
         } catch (PDOException $exception) {
                 echo "Connection error: " . $exception->getMessage();
         }
-
+        
+        var_dump($conn);
+        var_dump($url);
+        var_dump($db_name);
+        var_dump($username);
+        var_dump($password);
+     
+        
         return $this->conn;
     }
     
