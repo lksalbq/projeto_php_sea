@@ -3,10 +3,10 @@
 class Database {
 
     private $url = '';
-    private $host = $url["host"];
-    private $db_name = substr($url["path"], 1);
-    private $username = $url["user"];
-    private $password = $url["pass"];
+    private $host;
+    private $db_name;
+    private $username;
+    private $password;
     public $conn;
 
     public function __construct(){
@@ -14,17 +14,20 @@ class Database {
     }
     
     public function getConnection() {
-        
             
-            $this->conn = null;
+        $this->host = $url["host"];
+        $this->db_name = substr($url["path"], 1);
+        $this->username = $url["user"];
+        $this->password = $url["pass"];
+        $this->conn = null;
             
-            try {
+        try {
                 $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
-            } catch (PDOException $exception) {
+        } catch (PDOException $exception) {
                 echo "Connection error: " . $exception->getMessage();
-            }
+        }
 
-            return $this->conn;
+        return $this->conn;
     }
     
     
