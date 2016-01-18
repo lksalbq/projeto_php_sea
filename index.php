@@ -9,7 +9,7 @@ include_once "header.php";
         Usuário ou senha inválidas!
 </div>
 
-<form id="logar_form" action="logar.php" method="post" class="form-horizontal">
+<form id="logar_form" action="" method="post" class="form-horizontal">
     <fieldset>
 
 
