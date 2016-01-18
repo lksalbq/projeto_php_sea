@@ -2,15 +2,17 @@
 
 class Database {
 
+    
+    private $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    private $host = $url["host"];
+    private $db_name = substr($url["path"], 1);
+    private $username = $url["user"];
+    private $password = $url["pass"];
     public $conn;
 
+    
     public function getConnection() {
         
-            $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-            $host = $url["host"];
-            $db_name = substr($url["path"], 1);
-            $username = $url["user"];
-            $password = $url["pass"];
             
             $this->conn = null;
             
@@ -22,6 +24,8 @@ class Database {
 
             return $this->conn;
     }
+    
+    
 }
 
 ?>
