@@ -12,11 +12,11 @@ $db = $database->getConnection();
 $funcionario = new Funcionario($db);
 $cargo = new Cargo($db);
 
-$funcionario->nome=$_POST['nome'];
+$funcionario->nome=strip_tags($_POST['nome']);
 $funcionario->matricula=$_POST['matricula'];
 
 
-$cargo->nomeCargo=$_POST['nomeCargo'];
+$cargo->nomeCargo=strip_tags($_POST['nomeCargo']);
 $cargo->salario=$_POST['salario'];
 $cargo->idcargo=$_POST['idcargo'];
 

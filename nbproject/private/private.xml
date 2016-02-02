@@ -3,14 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/wamp/www/projeto_php_sea/editar_funcionarios.php</file>
             <file>file:/C:/wamp/www/projeto_php_sea/index.php</file>
+            <file>file:/C:/wamp/www/projeto_php_sea/cadastro_funcionario.php</file>
             <file>file:/C:/wamp/www/projeto_php_sea/lista_funcionarios.php</file>
-            <file>file:/C:/wamp/www/projeto_php_sea/login.php</file>
+            <file>file:/C:/wamp/www/projeto_php_sea/header.php</file>
             <file>file:/C:/wamp/www/projeto_php_sea/funcionario.php</file>
-            <file>file:/C:/wamp/www/projeto_php_sea/logar.php</file>
             <file>file:/C:/wamp/www/projeto_php_sea/config/database.php</file>
-            <file>file:/C:/wamp/www/projeto_php_sea/DAOfuncionario.php</file>
+            <file>file:/C:/wamp/www/projeto_php_sea/deletar.php</file>
         </group>
     </open-files>
 </project-private>
