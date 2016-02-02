@@ -32,7 +32,7 @@ if($_POST){
         echo 2;
     }
     
-    $cargo->nomeCargo = $_POST['nomeCargo'];
+    $cargo->nomeCargo = strip_tags($_POST['nomeCargo']);
     $cargo->salario = $_POST['salario'];
    
     if($cargo->create()){   
@@ -40,11 +40,11 @@ if($_POST){
          $id_cargo_funcionario = $idcargo['idcargo'];
     }
     
-    $endereco->logradouro = $_POST['logradouro'];
-    $endereco->numero = $_POST['numero'];
-    $endereco->complemento = $_POST['complemento'];
-    $endereco->bairro = $_POST['bairro'];
-    $endereco->cidade = $_POST['cidade'];
+    $endereco->logradouro = strip_tags($_POST['logradouro']);
+    $endereco->numero = strip_tags($_POST['numero']);
+    $endereco->complemento = strip_tags($_POST['complemento']);
+    $endereco->bairro = strip_tags($_POST['bairro']);
+    $endereco->cidade = strip_tags($_POST['cidade']);
     $endereco->uf = $_POST['uf'];
     $endereco->cep = $_POST['cep'];
    
@@ -55,7 +55,7 @@ if($_POST){
     
     
     
-    $funcionario->nome = $_POST['nome'];
+    $funcionario->nome = strip_tags($_POST['nome']);
     $funcionario->sexo = $_POST['sexo'];
     $funcionario->dataNascimento = $_POST['dataNascimento'];
     $funcionario->dataAdmissao = $_POST['dataAdmissao'];
@@ -69,7 +69,7 @@ if($_POST){
     
     
     
-    $login->usuario = $_POST['usuario'];
+    $login->usuario = strip_tags($_POST['usuario']);
     $login->senha = $_POST['senha'];
     $login->nivel = $_POST['nivel'];
     $login->fkFuncionario = $_POST['matricula'];
